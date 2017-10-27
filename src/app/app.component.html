@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h1>My Server</h1>
+      <button class="btn btn-primary" type="button" (click)="addServer()">Add Server</button>
+      <button class="btn btn-danger" type="button">Remove Server</button>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-xs-10">
+      <label for="server" class="form-control" *ngFor="let server of servers; let i = index" (click)="removeServer(i, server)">{{server.name}} {{server.id}}</label>
+  </div>
+  </div>
+</div>
